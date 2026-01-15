@@ -96,20 +96,15 @@ char generateWinner(const std::string& playerMove, const std::string& computerMo
 
 - Lastly we will peform 3 if statements that will prompt the user if he has Won, Loss or drawed with the computer. Note i put (return 0) at the end but that is completly optional although i dont know much about other compilers and if they require it
 ```
-// Creating the entry point of our program //
 int main()
 {
-	// Initializing Timer For Random Number Generator //
 	srand(time(nullptr));
 
-	// Player Move Tracker //
 	std::string playerMove;
 
-	// Prompting User With Game Objects Selection //
 	std::cout << "Welcome to rock / paper / scissors game.\tPress Enter to begin";
 	std::cin.get();
 
-	// Grabbing User Input //
 	while (true) {
 		std::cout << "Pick your game object: Rock | Paper | Scissors" << '\n';
 		std::cin >> playerMove;
@@ -119,10 +114,8 @@ int main()
 			std::cout << "Invalid Input: Please try again" << '\n';
 	}
 
-	// Generating Computers Move //
 	std::string computerMove = generate_computers_move();
 
-	// Comparing End Results //
 	char gameResults = generateWinner(playerMove, computerMove);
 	if (gameResults == '?')
 	{
@@ -130,7 +123,6 @@ int main()
 		return 0;
 	}
 
-	// Prompting user with the end results on who won the game then exiting program //
 	if (gameResults == 'W')
 	{
 		std::cout << "\n\t\t\tCongratulation you won the game";
@@ -144,7 +136,6 @@ int main()
 		std::cout << "\n\t\t\tGame Draw, Better luck next time";
 	}
 
-	// Optional return before program automatically exits as the end of the main entry //
 	return 0;
 }
 ```
