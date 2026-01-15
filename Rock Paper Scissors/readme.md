@@ -5,4 +5,4 @@
 ## Step 1
 - First we Include all the necessary libraries we will use from visual studio 2022
 
-[[ print("hello world") ]]
+[ print("hello world") ]
