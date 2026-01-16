@@ -85,7 +85,7 @@ void setCourseStats(coursesData& course, int type) {
 ```
 
 ## Step 6: Collecting Course Data & Memory Optimization
-- Firstly we take 2 parameters that is the direct refrence to struct_list and totalCourses then immediatly entering a for loop after clearing the input stream using discardLine() which is optional but it wont hurt to use it, next we create a struct for each individual itereation inside the for loop and store the course name, credit hours and grade using the reusable function from above and manually getting the user input with std::getline.
+- Firstly we take 2 parameters that is the direct refrence to struct_list and totalCourses then immediatly entering a for loop after clearing the input stream using discardLine() which is optional but it wont hurt to use it we create a struct for each individual itereation inside the for loop and store the course name, credit hours and grade using the reusable function from above and manually getting the user input with std::getline.
 
 - Once each iteration inside the for loop is at the last executable code we will push the struct to the vector which basically stores our struct for later so we can calculate the GPA at the end.
 ```
