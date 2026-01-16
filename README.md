@@ -7,3 +7,4 @@ All projects include a README file that provides documentation specific to that 
 Projects included (ordered from easiest to hardest):
 
 - [Rock, Paper, Scissors Game](https://github.com/maxcomuk/Cpp-Projects/blob/main/Rock%20Paper%20Scissors/Main.cpp) - Project idea from --> https://www.geeksforgeeks.org/cpp/rock-paper-scissor-game-in-cpp/
+- [CGPA Calculator]
