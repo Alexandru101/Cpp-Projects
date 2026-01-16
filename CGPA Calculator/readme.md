@@ -20,8 +20,8 @@ Overall our goal is to get how many courses the user has taken then get the grad
 #include <iomanip>
 ```
 
-## Step 2
-This function will reset the input stream by clearing the leftover whitespaces and reseting the errors if any from std::cin, lastly helps keeps us from having to keep rewriting the same code again.
+## Step 2: Input stream Management
+- This function will reset the input stream by clearing the leftover whitespaces and reseting the errors if any from std::cin, lastly helps keeps us from having to keep rewriting the same code again.
 ```
 void discardLine() {
 	if (std::cin.fail())
@@ -31,8 +31,8 @@ void discardLine() {
 }
 ```
 
-## step 3
-Creating a struct that will hold the required variables for the user such as courseName, grade and creditHours. Essentially we can use this to create copies for each individual course the user has took.
+## step 3: Defining the Data Structure
+- Creating a struct that will hold the required variables for the user such as courseName, grade and creditHours. Essentially we can use this to create copies for each individual course the user has took.
 ```
 struct coursesData {
 	std::string courseName;
@@ -41,8 +41,8 @@ struct coursesData {
 };
 ```
 
-## Step 4
-Grabbing the original integer named totalCourses using the & and then prompting the user with how much courses he has took, once the input is validated by the if statement we set the value to the totalCourses.
+## Step 4: Capturing Course Count
+- Grabbing the original integer named totalCourses using the & and then prompting the user with how much courses he has took, once the input is validated by the if statement we set the value to the totalCourses.
 ```
 void getCourseAmount(int& totalCourses) {
 	while (true) {
@@ -55,8 +55,8 @@ void getCourseAmount(int& totalCourses) {
 }
 ```
 
-## Step 5
-Taking the integer named type so that we can reuse this function for both credit hours and grade. Note we also wrap the code in a while loop so that we can validate the users input and once the input is valid and the type is validated (type 1 = Credit Hours, type 2 = Grade) we set the struct's value to the users input, lastly if anything fails we prompt the user with the failure message and break out the loop which leads to the function automatically destroying (freeing memory on the stack)
+## Step 5: Validating Course Statistics
+- Taking the integer named type so that we can reuse this function for both credit hours and grade. Note we also wrap the code in a while loop so that we can validate the users input and once the input is valid and the type is validated (type 1 = Credit Hours, type 2 = Grade) we set the struct's value to the users input, lastly if anything fails we prompt the user with the failure message and break out the loop which leads to the function automatically destroying (freeing memory on the stack)
 ```
 void setCourseStats(coursesData& course, int type) {
 	while (true) {
@@ -84,10 +84,10 @@ void setCourseStats(coursesData& course, int type) {
 }
 ```
 
-## Step 6
-Firstly we take 2 parameters that is the direct refrence to struct_list and totalCourses then immediatly entering a for loop after clearing the input stream using discardLine() which is optional but it wont hurt to use it, next we create a struct for each individual itereation inside the for loop and store the course name, credit hours and grade using the reusable function from above and manually getting the user input with std::getline.
+## Step 6: Collecting Course Data & Memory Optimization
+- Firstly we take 2 parameters that is the direct refrence to struct_list and totalCourses then immediatly entering a for loop after clearing the input stream using discardLine() which is optional but it wont hurt to use it, next we create a struct for each individual itereation inside the for loop and store the course name, credit hours and grade using the reusable function from above and manually getting the user input with std::getline.
 
-Once each iteration inside the for loop is at the last executable code we will push the struct to the vector which basically stores our struct for later so we can calculate the GPA at the end.
+- Once each iteration inside the for loop is at the last executable code we will push the struct to the vector which basically stores our struct for later so we can calculate the GPA at the end.
 ```
 void getCourseData(std::vector <coursesData>& struct_list, int& totalCourses) {
 	discardLine();
@@ -107,8 +107,8 @@ void getCourseData(std::vector <coursesData>& struct_list, int& totalCourses) {
 }
 ```
 
-## Step 7
-Looping through the vector and applying the formulat explained from above, once we are finished with the loop we return the calculated gpa.
+## Step 7: GPA Calculation Logic
+- Looping through the vector and applying the formulat explained from above, once we are finished with the loop we return the calculated gpa.
 ```
 double calculateGPA(const std::vector <coursesData>& struct_list) {
 	double totalGradePoints = 0.0;
@@ -126,7 +126,8 @@ double calculateGPA(const std::vector <coursesData>& struct_list) {
 }
 ```
 
-## Step 8
+## Step 8: Main Entry
+We control the flow of the program and functions here then after we collect the end result (GPA) we prompt the user with the final result to the exact 0.00 decimal
 ```
 int main()
 {
