@@ -257,7 +257,7 @@ int main()
 		else if (option == 3)
 		{
 			user1.set_difficulty_level();
-			option = 1;
+			option = displayOptions();
 		}
 
 		else
