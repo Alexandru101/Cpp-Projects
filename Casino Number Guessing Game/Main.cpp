@@ -255,7 +255,7 @@ int main()
 			option = displayOptions();
 		}
 
-		// Option 3 means we will simply change the difficulty then set option back to 1 to play the game in the next iteration //
+		// Option 3 means we will simply change the difficulty then prompt the options again //
 		else if (option == 3)
 		{
 			user1.set_difficulty_level();
