@@ -38,7 +38,7 @@ struct token
 ## Step 3: Building the Calculator Class and Private Helper Methods
 Next, we create a class (named Calculator) that handles organizing the user's string/equation into a token list. This list is a std::vector type that uses the Token struct as a template to store each character's type and value.
 
-#
+##
 
 To follow BIDMAS order, we must prioritize multiplication and division over addition and subtraction, as well as giving sin, cos, tan, and log higher priority. Of course, we give parentheses () the highest priority by not including them in this specific function, as they are handled individually later in the calculate function.
 
@@ -46,10 +46,9 @@ We do this by using multiple if statements for each operator and returning a num
 
 Note: Parentheses are always calculated first regardless of these values. We handle the parenthesis logic independently, meaning we bypass the priority check and simply prioritize them if they exist in the equation.
 
-###
+##
 
-hello
-
+Finally, we solve the equation by taking two values and an operator. The function (named apply_operation_order) identifies the operator, performs the calculation independently, and returns the result to the calling function. This process is repeated until all values have been calculated and no operators remain in the stack (named operators).
 ```
 class Calculator
 {
