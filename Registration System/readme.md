@@ -8,7 +8,7 @@ Using the sqlite3 library, create a local database that will be used to store th
 ## Step 1: Including Libraries
 Import both sqlite3.h and sqlite3.c from --> [Download Link](https://sqlite.org/2026/sqlite-amalgamation-3510200.zip)
 
-Once you have both libraries and your compiler doesnt error when you try to build your cpp file with the sqlite3.h included then you are good to go
+Once you have both libraries and your compiler doesnt error when you try to build your cpp file with the sqlite3.h included then it is working
 ```
 #include <iostream>
 #include <string>
