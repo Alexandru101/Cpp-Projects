@@ -11,3 +11,4 @@ Projects included (ordered from easiest to hardest):
 - [Casino Number Guessing Game](https://github.com/Alexandru101/Cpp-Projects/blob/main/Casino%20Number%20Guessing%20Game/Main.cpp) - Project idea from --> [website](https://www.geeksforgeeks.org/cpp/top-50-cpp-project-ideas-for-beginners-advanced/)
 - [Registration System](https://github.com/Alexandru101/Cpp-Projects/blob/main/Registration%20System/Main.cpp) - Project idea from --> [website](https://www.geeksforgeeks.org/cpp/top-50-cpp-project-ideas-for-beginners-advanced/)
 - [Scientific Calculator](https://github.com/Alexandru101/Cpp-Projects/blob/main/Scientific%20Calculator/Main.cpp) - Project idea from --> [website](https://www.geeksforgeeks.org/cpp/top-50-cpp-project-ideas-for-beginners-advanced/)
+- [Student Database Management System]
