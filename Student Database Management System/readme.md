@@ -39,9 +39,9 @@ We use the provided function sqlite3_open to open an existing database however, 
 Firstly, we will need three tables to contain the saved data. The first is User Login Information, used to log in the user to manage the database or register a new account. It is important to keep track of this so the user can log back in after exiting the program. This is kept separate from other data to prevent any mix-ups, though this is personal preference. Second is the Student Information, which will be used to track all students within the database and is required for student search lookups. Finally, the Courses Information tracks all existing courses and allows the admin (the logged-in user) to add or remove courses. Note that we also provide options to display the students and courses currently in the database.
 
 ### Structure Of The Database
-USERS: ID --> USERNAME (string), PASSWORD (string)
-STUDENTS: ID --> NAME (string), AGE (integer / int), PLACE_OF_BIRTH (string), RELIGION (string)
-COURSES: ID --> COURSE (string), PASSGRADE (integer / int)
+USERS: ID --> USERNAME (string), PASSWORD (string)>
+STUDENTS: ID --> NAME (string), AGE (integer / int), PLACE_OF_BIRTH (string), RELIGION (string)>
+COURSES: ID --> COURSE (string), PASSGRADE (integer / int)>
 ```
 void setupDatabase(sqlite3*& db)
 {
