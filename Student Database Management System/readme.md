@@ -227,4 +227,46 @@ public:
 
 ```
 
-## Step 6
+## Step 6: Setting Up Database Registration
+The decision integer tracks the menu option selected by the user. Upon entering the infinite while loop, we call showMenu() to display the available choices and capture the user's input.
+
+Calling ClearInputBuffer() is essential here to clear any leftover whitespace or newline characters after the user provides their input. It is also critical for error handling, allowing the program to recover if the user enters invalid data (such as letters when a number is expected).
+
+Once the decision is captured, we perform conditional checks to call the appropriate function from the AuthManager class based on the user's choice.
+
+IMPORTANT: If the user chooses to exit the program, we must call sqlite3_close(db) before terminating. This ensures that database resources are freed and the file is properly unlocked so it can be accessed by other programs such as the user reopening the program.
+```
+void setup_user_registration(AuthManager& user, sqlite3*& db)
+{
+	int decision;
+
+	while (true)
+	{
+		showMenu();
+		if (!(std::cin >> decision && (decision > 0 && decision < 4)))
+		{
+			std::cout << "Invalid Input: Please try again\n";
+			ClearInputBuffer();
+			continue;
+		}
+
+		ClearInputBuffer();
+
+		if (decision == 1)
+		{
+			if (user.logginUser(db))
+				break;
+		}
+		else if (decision == 2)
+		{
+			user.registerUser(db);
+		}
+		else
+		{
+			std::cout << "\nClosing Program . . .\n";
+			sqlite3_close(db);
+			exit(0);
+		}
+	}
+}
+```
