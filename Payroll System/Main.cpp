@@ -7,7 +7,7 @@
 
 int main() {
 	Database db;
-	AuthManager auth; // Default admin account. To customize username and password to the constructor do this 'AuthManager user("customUsername", "customPassword")';
+	AuthManager auth; // Default admin account. To customize username and password to the constructor do this 'AuthManager auth("customUsername", "customPassword")';
 	PayrollManager payroll;
 
 	if (!db.openDatabase("payroll_management_system.db"))
