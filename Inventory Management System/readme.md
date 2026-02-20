@@ -62,7 +62,7 @@ public:
 ```
 
 ## Step 2: Database.cpp
-1. Constructor & Destructor
+- Constructor & Destructor
 The constructor initializes the db pointer to nullptr, indicating that no database connection is active. The destructor ensures proper resource management. If the database was opened (db is not nullptr), it safely closes the connection using sqlite3_close(db) and resets the pointer to nullptr. This guarantees that the database connection is properly released when the Database object goes out of scope, preventing resource leaks.
 
 2. OpenDatabase
